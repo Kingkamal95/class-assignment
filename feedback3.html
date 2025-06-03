@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Input Example</title>
+</head>
+<body>
+    <input id="userInput" size="60">
+    <button onclick="userSubmit()">Submit</button>
+    <br>
+    <p><div id="result"></div></p>
+
+    <script type="text/javascript">
+        function userSubmit() {
+            var userInput = document.getElementById('userInput').value;
+            document.getElementById('result').innerHTML = 'You typed: ' + userInput;
+        }
+    </script>
+</body>
+</html>

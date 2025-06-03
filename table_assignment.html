@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Form</title>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault(); 
+            const form = document.forms["contactusForm"];
+            const data = {
+                EmpID: form["idTxt"].value,
+                FirstName: form["fnameTxt"].value,
+                LastName: form["lnameTxt"].value,
+                DeptNo: form["deptTxt"].value
+            };
+
+            // Display data
+            let output = "<h3>Submitted Data:</h3><ul>";
+            for (let key in data) {
+                output += `<li><strong>${key}:</strong> ${Array.isArray(data[key]) ? data[key].join(", ") : data[key]}</li>`;
+            }
+            output += "</ul>";
+
+            document.getElementById("output").innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+
+    <form name="contactusForm" method="post" onsubmit="handleSubmit(event)" enctype="multipart/form-data">
+        <table border="1">
+            <tr>
+                <td><label for="idTxt">Emp id #:</label></td>
+                <td><input type="text" id="idTxt" name="idTxt" size="65" /></td>
+            </tr>
+            <tr>
+                <td><label for="fnameTxt">First Name:</label></td>
+                <td><input type="text" id="fnameTxt" name="fnameTxt" size="75" /></td>
+            </tr>
+            <tr>
+                <td><label for="lnameTxt">Last Name:</label></td>
+                <td><input type="text" id="lnameTxt" name="lnameTxt" size="35" /></td>
+            </tr>
+            <tr>
+                <td><label for="deptTxt">Dept no #:</label></td>
+                <td><input type="text" id="deptTxt" name="deptTxt" size="35" /></td>
+            </tr>
+            <tr>
+                <td><label for="sdateTxt">Start date:</label></td>
+                <td><input type="text" id="sdateTxt" name="sdateTxt" size="35" /></td>
+            </tr>
+            <tr>
+                <td><label for="salaryTxt">Salary #:</label></td>
+                <td><input type="text" id="salaryTxt" name="salaryTxt" size="35" /></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" id="genderMale" name="gender" value="male" />
+                    <label for="genderMale">Male</label>
+                    <input type="radio" id="genderFemale" name="gender" value="female" />
+                    <label for="genderFemale">Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Field:</td>
+                <td>
+                    <input type="checkbox" name="Vehicle" value="Bike">IMS<br>
+                    <input type="checkbox" name="Vehicle" value="Car">BFS<br>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="queryTxt">Question?/Comment:</label></td>
+                <td><textarea id="queryTxt" name="queryTxt" cols="40" rows="7"></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="pwd">Password:</label></td>
+                <td><input type="password" id="pwd" name="pwd" /></td>
+            </tr>
+            <tr>
+                <td><label for="cpwd">Confirm Password:</label></td>
+                <td><input type="password" id="cpwd" name="cpwd" /></td>
+            </tr>
+            <tr>
+                <td><label for="resume">Upload Resume:</label></td>
+                <td><input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" /></td>
+            </tr>
+            <tr>
+                <td><label for="photo">Upload Image:</label></td>
+                <td><input type="file" id="photo" name="photo" accept="image/*" /></td>
+            </tr>
+            <tr>
+                <td><label for="cars">Cars:</label></td>
+                <td>
+                    <select id="cars" name="cars">
+                        <option value="volvo">volvo</option>
+                        <option value="fiat">fiat</option>
+                        <option value="audi">audi</option>
+                        <option value="benz">benz</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="reset" value="Reset" />
+                    <input type="submit" value="Submit" />
+                    <input type="button" value="NeedHelp" onclick="alert('Contact support at help@example.com');" />
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <div id="output" style="margin-top:20px;"></div>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <form name="form1" action="first.html" method="POST">
+        <div> <div> Select your favorite color: <input type="color" name="favcolor"><br>
+        </div>
+        <div> Birthday: <input type="date" name="bday_initial"><br>
+        </div>
+        </div>
+        <div> Birthday (date and time): <input type="datetime-local" name="bdaytime"><br>
+        </div>
+        <div> Enter a date before 1980-01-01: <input type="date" name="bday_before_1980" max="1979-12-31"><br>
+        </div>
+        <div> Enter a date after 2000-01-01: <input type="date" name="bday_after_2000" min="2000-01-02"><br>
+        </div>
+        <div> Select a time: <input type="time" name="usr_time"><br>
+        </div>
+        <div> Quantity (between 1 and 5): <input type="number" name="quantity" min="1" max="5"><br>
+        </div>
+        <div> Points Min 1: <input type="range" name="points_range" min="1" max="10"> Max 10<br>
+        </div>
+        <div> Number <input type="number" name="points_number_step" step="3"><br>
+        </div>
+        <div> Search Google: <input type="search" name="googlesearch"><br>
+        </div>
+        <div> Telephone: <input type="tel" name="usrtel"><br>
+        </div>
+        <div> Add your homepage: <input type="url" name="homepage"><br>
+        </div>
+        <div> Select a week: <input type="week" name="year_week"><br>
+        </div>
+        <div> Select Browser: <input list="browsers" name="browser">
+            <datalist id="browsers">
+                <option value="Internet Explorer">
+                <option value="Firefox">
+                <option value="Chrome">
+                <option value="Opera">
+                <option value="Safari">
+            </datalist><br>
+        </div>
+        <div> Username: <input type="text" name="usr_name" placeholder="Enter Username" required><br>
+        </div>
+        <div> First name: <input type="text" name="fname" autofocus><br>
+        </div>
+        <div> E-mail: <input type="email" name="email" autocomplete="off"><br>
+        </div>
+        <div> Country code: <input type="text" name="country_code" pattern="[A-Za-z]{3}" title="Three letter country code"><br>
+        </div>
+        <div> <input type="image" src="C:\Users\aniru\OneDrive\Desktop\WhatsApp Image 2024-11-24 at 19.13.22_b0b92504.jpg" alt="Submit" width="48" height="48" formaction="Profile.html">
+        </div>
+        <div> <input type="submit" value="Submit"><br>
+        </div>
+        <div> <input type="submit" formaction="list.html" value="Submit as admin">
+        </div>
+    </form>
+
+    <div> <div> Last name: <input type="text" name="lname" form="form1"><br>
+        </div>
+    </div>
+
+</body>
+</html>

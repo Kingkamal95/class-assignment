@@ -1,0 +1,38 @@
+/* External CSS file: style_assignment.css */
+/* This demonstrates CSS precedence - External < Internal < Inline */
+
+body {
+    background-color: #00FFFF; /* Cyan/aqua background */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 10px;
+}
+
+h1 {
+    color: orange; /* This will be overridden by internal CSS (red) */
+    font-size: 1.5em;
+    margin: 0.2em;
+    padding: 1em;
+    border-style: dashed;
+    border-width: 2px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-color: #000000;
+}
+
+h2 {
+    color: orange; /* This will be overridden by internal CSS (blue) */
+    background-color: #FFFF00; /* Yellow background */
+    font-size: 1.2em;
+    margin: 0.2em;
+    padding: 1em;
+    border-style: dotted;
+    border-width: 3px;
+    border-color: #0000FF; /* Blue border */
+}
+
+p {
+    color: orange; /* This will be overridden by internal CSS (green) */
+    font-size: 1em;
+    margin: 1em 0;
+}

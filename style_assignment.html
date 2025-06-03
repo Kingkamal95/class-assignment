@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    /* External CSS simulation - normally in style_assignment.css */
+    h1 {
+      color: orange;
+      font-size: 1.5em;
+      margin: 0.2em;
+      padding: 1em;
+      border-style: dashed;
+      border-width: 2px;
+      border-left-width: 10px;
+      border-right-width: 10px;
+      border-color: #000000;
+    }
+    
+    h2 {
+      color: orange;
+      background-color: #FFFF00;
+      font-size: 1.2em;
+      margin: 0.2em;
+      padding: 1em;
+      border-style: dotted;
+      border-width: 3px;
+      border-color: #0000FF;
+    }
+    
+    p {
+      color: orange;
+      font-size: 1em;
+      margin: 1em 0;
+    }
+    
+    body {
+      background-color: #00FFFF;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 10px;
+    }
+    
+    /* Internal CSS - higher precedence than external */
+    h1 {color: red;}
+    h2 {color: blue;}
+    p  {color: green;}
+  </style>
+</head>
+  
+<body>
+Here we can see text in red as internal style is overriding external that was setting color to orange
+  <h1 style="background-color: yellow">All header 1 elements will be red</h1>
+  <h2>All header 2 elements will be blue</h2>
+  <p>All text in paragraphs will be green.</p>
+  <br><br><br><br><br><br><br><br><br><br>
+  Inline styling overrides internal as well as External Styling
+  <h1 style="color:yellow">All header 1 elements will be red</h1>
+  <h2>All header 2 elements will be blue</h2>
+  <p>All text in paragraphs will be green.</p>
+</body>
+</html>
